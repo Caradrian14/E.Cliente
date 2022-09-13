@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf8">
+    <meta name="author" content="Adrià Jordà">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/app.js" async></script>
+    <title>Mi Formulario</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Formulario Ejercicio 1</h1>
+        </header>
+        <form id="formulario" action="./php/verForm.php" method="POST">
+            <label for="nombre"><p>Tu Nombre</p>
+                <input type="text" name="nombre" id="nombre" placeholder="Tu Nombre y Apellidos">
+            </label>
+            <label for="email"><p>Tu correo</p>
+                <input type="email" name="email" id="email" placeholder="Tu Correo Electronico">
+            </label>
+            <label for="birthday"><p>Tu fecha de nacimiento</p>
+                <input type="date" name="birthday" id="birthday" placeholder="Tu fecha de nacimiento">
+            </label>
+            <label for="sexo"><p>Tu sexo: </p>
+                <p><input type="radio" name="sexo" id="sexo" value="men"> Hombre</p>
+                <p><input type="radio" name="sexo" id="sexo" value="women"> Mujer</p>
+                <p><input type="radio" name="sexo" id="sexo" value="no-binary"> No binario</p>
+            </label>
+            <label for="codigoPostal"><p>Tu Codigo Postal</p>
+                <input type="text" name="codigoPostal" id="codigoPostal" placeholder="Tu fecha de nacimiento" pattern="[0-9]{5}">
+            </label>
+            <label for="cicloFormativo"><p>Tu Ciclo Formativo</p>
+                <select name="cicloFormativo" id="cicloFormativo" form="formulario">
+                    <option value="DAW">DAW</option>
+                    <option value="DAM">DAM</option>
+                    <option value="ASIX">ASIX</option>
+                </select>
+            </label>
+            <label for="frameworks"><p>Frameworks que conoces</p>
+                <input type="checkbox" name="frameworks" id="frameworks" value="Angular">Angular
+                <input type="checkbox" name="frameworks" id="frameworks" value="Vue">Vue
+                <input type="checkbox" name="frameworks" id="frameworks" value="Simfony">Simfony
+                <input type="checkbox" name="frameworks" id="frameworks" value="Laravel">Laravel
+            </label>
+            <label for="privacidad"><p>Condiciones de Privacidad</p>
+                <input type="checkbox" name="privacidad" id="privacidad" required>Acepto la Politica de privacidad
+            </label>
+            <button class="button-19" type="submit" form="formulario" value="submit" role="button">Enviar</button>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
