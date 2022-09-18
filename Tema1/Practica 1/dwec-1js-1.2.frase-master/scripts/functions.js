@@ -12,14 +12,6 @@ function maysc(cadena) {
 	return cadena.toUpperCase();
 }
 
-function titulo2(cadena) {
-	let palabrasSeparadas = cadena.split(" ");
-	for(let i=0; i<palabrasSeparadas.length; i++){
-		palabrasSeparadas[i] = palabrasSeparadas[i][0].toUpperCase() + palabrasSeparadas[i].substr(1);
-	}
-	return palabrasSeparadas.join(" ");
-}
-
 function titulo(cadena) {
 	let cadenaSeparada = cadena.split(" ");
 	var palabras =  cadenaSeparada.map(function(palabra){
@@ -42,13 +34,7 @@ function palabrasReves(cadena) {
 }
 
 function palindromo(cadena) {
-	var length = cadena.length;
-	for(let i = 0; i < length / 2; i++){
-		if(cadena[i] !== cadena[length - 1 - i]){
-			return false;
-		}
-	}
-	return true;
+	return cadena == cadena.split('').reverse().join('');
 }
 
 module.exports = {
