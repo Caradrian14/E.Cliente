@@ -1,0 +1,1 @@
+declrarar variabele siempre en "let"
